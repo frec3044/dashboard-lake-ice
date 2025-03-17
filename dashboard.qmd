@@ -41,7 +41,8 @@ Use the following chunk to process the data.
 ### Column 
 
 <!--
-Create a box for the number of lakes in the dataset
+Create a value box card for the number of lakes in the dataset
+You will need to have already created a variable called num_lakes
 --->
 
 
@@ -58,7 +59,8 @@ list(
 ### Column 
 
 <!--
-Create a value box for the earliest measurement
+Create a value box card for the earliest measurement
+You will need to have already created a variable called earliest_year
 --->
 
 ```{r}
@@ -74,7 +76,8 @@ list(
 ### Column 
 
 <!--
-Create a value box for the most recent measurement
+Create a value box card for the most recent measurement
+You will need to have already created a variable called most_recent_year
 --->
 
 ```{r}
@@ -92,7 +95,8 @@ list(
 ### Column
 
 <!--
-Create a value box with the name of lake that is changing the fastest
+Create a value box card with the name of lake that is changing the fastest
+You will need to have already created a variable called highest_slope_lake
 --->
 
 ```{r}
@@ -109,7 +113,8 @@ list(
 ### Column 
 
 <!--
-Create a value box with the name of lake that is changing the least
+Create a value box card with the name of lake that is changing the least
+You will need to have already created a variable called smallest_slope_lake
 --->
 
 ```{r}
@@ -126,7 +131,8 @@ list(
 ### Column 
 
 <!--
-Create a value box with mean slope across all lakes
+Create a value box card with mean slope across all lakes
+You will need to have already created a variable called mean_slope
 --->
 
 ```{r}
@@ -142,7 +148,8 @@ list(
 ### Column 
 
 <!--
-Create a value box with the predicted mean number of years to lose 1 week of ice
+Create a value box card with the predicted mean number of years to lose 1 week of ice
+You will need to have already created a variable called year_decade
 --->
 
 ```{r}
@@ -158,7 +165,8 @@ list(
 ## Row {height="60%"}
 
 <!--
-Add the data as a table.  The columns should be `lake name` and `slope`.  Use
+Add the data as a table.  The columns of the data frame named `slope_data` 
+should be `lake name` and `slope`.  Use the code below as-is
 --->
 
 ```{r}
@@ -187,10 +195,12 @@ Add histogram that shows the slope values from the different lakes
 
 <!--
 Add a plot of your choice that you think would be informative for the dashboard
+The plot must use the data on the slopes of the lakes and data in the JSON file 
+that describes characteristics of the lakes (data/lake_metadata.json)
 --->
 
 ```{r}
-#| title: #Add useful title for box
+#| title: #Add useful title for card
 
 ```
 
