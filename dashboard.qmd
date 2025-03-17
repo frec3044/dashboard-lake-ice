@@ -1,0 +1,197 @@
+---
+title: "Lake Ice Phenology Dashboard"
+format: 
+  dashboard:
+    embed-resources: true
+    css: style.css
+logo: images/noun-frozen-lake-serenity-6926278.png #image created by jowy san from Noun Project  
+---
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(readxl)
+library(DT)
+theme_set(theme_bw(base_size = 22))
+```
+
+```{r}
+#| label: load-data
+#| message: false
+
+data <- read_excel("data/lake_ice_off_data.xlsx", sheet = 2)
+```
+
+<!--
+Use the following chunk to process the data.
+1. Clean up the data so it is ready for analysis
+2. Calculate the slope and intercept for each lake.  The creation of a function and use of a map function is required for full credit.
+3. Generate values for required for the 7 value boxes
+--->
+```{r}
+#| label: prep-data
+
+
+```
+
+## Row {height="20%"}
+
+### Column 
+
+<!--
+Create a box for the number of lakes in the dataset
+--->
+
+
+```{r}
+#| content: valuebox
+#| title: "Number of lakes"
+
+list(
+  color = "primary",
+  value = num_lakes
+)
+```
+
+### Column 
+
+<!--
+Create a value box for the earliest measurement
+--->
+
+```{r}
+#| content: valuebox
+#| title: "Earliest measurement"
+
+list(
+  color = "primary",
+  value = earliest_year
+)
+```
+
+### Column 
+
+<!--
+Create a value box for the most recent measurement
+--->
+
+```{r}
+#| content: valuebox
+#| title: "Most recent measurement"
+
+list(
+  color = "primary",
+  value = most_recent_year
+)
+```
+
+## Row {height="20%"}
+
+### Column
+
+<!--
+Create a value box with the name of lake that is changing the fastest
+--->
+
+```{r}
+#| content: valuebox
+#| title: "Fastest changing lake"
+
+list(
+  icon = "sort-up",
+  color = "primary",
+  value = highest_slope_lake
+)
+```
+
+### Column 
+
+<!--
+Create a value box with the name of lake that is changing the least
+--->
+
+```{r}
+#| content: valuebox
+#| title: "Slowest changing lake"
+
+list(
+  icon = "sort-down",
+  color = "primary",
+  value = smallest_slope_lake
+)
+```
+
+### Column 
+
+<!--
+Create a value box with mean slope across all lakes
+--->
+
+```{r}
+#| content: valuebox
+#| title: "Mean Slope (DOY / year)"
+
+list(
+  color = "primary",
+  value = round(mean_slope,2)
+)
+```
+
+### Column 
+
+<!--
+Create a value box with the predicted mean number of years to lose 1 week of ice
+--->
+
+```{r}
+#| content: valuebox
+#| title: "Number of years to lose 1 week"
+
+list(
+  color = "primary",
+  value = round(year_decade,0)
+)
+```
+
+## Row {height="60%"}
+
+<!--
+Add the data as a table.  The columns should be `lake name` and `slope`.  Use
+--->
+
+```{r}
+ slope_data |>
+  arrange(slope) |>
+  mutate(slope = round(slope, 2)) |> 
+  select(lake_name, slope) |> 
+  datatable(
+    colnames = c("Lake name", "Slope"),
+    options = list(dom = 'ftp', paging = TRUE)
+    )
+```
+
+### Column
+
+<!--
+Add histogram that shows the slope values from the different lakes
+--->
+
+```{r}
+#| title: Histogram
+
+```
+
+### Column
+
+<!--
+Add a plot of your choice that you think would be informative for the dashboard
+--->
+
+```{r}
+#| title: #Add useful title for box
+
+```
+
+
