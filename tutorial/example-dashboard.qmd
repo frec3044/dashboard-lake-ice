@@ -1,0 +1,107 @@
+---
+title: "Sunapee Ice-off Dashboard"
+format: 
+  dashboard:
+    embed-resources: true
+---
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(readxl)
+library(DT)
+theme_set(theme_bw(base_size = 22))
+```
+
+```{r}
+#| label: load-data
+#| message: false
+
+data <- read_excel("../assignment/data/lake_ice_off_data.xlsx", sheet = 2)
+```
+
+```{r}
+#| label: prep-data
+
+sunapee <- data |> 
+  mutate(ice_off_doy = as.numeric(ice_off_doy)) |> 
+  filter(lake_name == "Sunapee")
+
+max_years <- sunapee |> 
+  summarize(range = max(year) - min(year)) |> 
+  pull(range)
+
+earliest_ice_off <-  sunapee |> 
+  summarize(ice_off_doy = min(ice_off_doy)) |> 
+  pull(ice_off_doy)
+
+latest_ice_off <-  sunapee |> 
+  summarize(ice_off_doy = max(ice_off_doy)) |> 
+  pull(ice_off_doy)
+```
+
+## Row {height="20%"}
+
+### Column 
+
+```{r}
+#| content: valuebox
+#| title: "Length of record (years)"
+
+list(
+  color = "primary",
+  value = max_years
+)
+```
+
+### Column 
+
+```{r}
+#| content: valuebox
+#| title: "Earliest ice-off day of year"
+
+list(
+  color = "primary",
+  value = earliest_ice_off
+)
+```
+
+### Column 
+
+```{r}
+#| content: valuebox
+#| title: "Latest ice-off day of year"
+
+list(
+  color = "primary",
+  value = latest_ice_off
+)
+```
+
+## Row {height="60%"}
+
+
+```{r}
+#| title: Data table
+ sunapee |>
+  select(year, ice_off_doy) |> 
+  datatable(
+    colnames = c("Year", "DOY"),
+    options = list(dom = 'ftp', paging = TRUE)
+    )
+```
+
+### Column
+
+```{r}
+#| title: Changes in ice-off Day of Year
+
+sunapee |> 
+  ggplot(aes(x = year, y = ice_off_doy)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(x = "Year", y = "Ice-off Day of Year")
+
+```
