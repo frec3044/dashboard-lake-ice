@@ -87,7 +87,7 @@ Question 10:
 
 - No Credit: No answer provided
 
-Question 11:
+Tidyverse
 
 - Full Credit: Analysis uses tidyverse functions that were covered in class, these my include joins, map, functions, filters, selects, mutates, etc.
 
@@ -107,7 +107,7 @@ Quarto
 
 GitHub
 
--   Full Credit: assignment found on the course GitHub, multiple commits provided, and HTML committed
+-   Full Credit: Assignment found on the course GitHub, multiple commits provided, and HTML committed
 
 -   Partial Credit: Assignment found on course GitHub, but only a single commit was provided (no evidence that the student saved and committed progress) or missing HTML on GitHub.
 
