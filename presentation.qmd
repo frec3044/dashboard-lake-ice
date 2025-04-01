@@ -6,21 +6,64 @@ format:
 editor: visual
 ---
 
-## Quarto
+## Goals
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+- Use skills developed over the semester to analyze the ice-off data in more detail
+- Construct a dashboard that displays the data and analysis
 
-## Bullets
 
-When you click the **Render** button a document will be generated that includes:
+## What is a dashboard?
 
--   Content authored with markdown
--   Output from executable code
+- A dashboard is website or document that uses graphs, tables, and other visual elements to represent data and analyses.  
+- A dashboard has an audience and should support decision-making
 
-## Code
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+## Principles of building a dashboard
 
-```{r}
-1 + 1
-```
+- Keep it Simple and Intuitive
+- Use Consistent Design Elements
+- Prioritize Information
+
+::: aside
+<https://medium.com/@mokkup/8-essential-dashboard-design-principles-for-effective-data-visualization-40653c5fd135>
+:::
+
+
+## Principles of building a dashboard
+
+- Make it Responsive
+- Use White Space Effectively
+- Use Consistent Layout
+
+::: aside
+<https://medium.com/@mokkup/8-essential-dashboard-design-principles-for-effective-data-visualization-40653c5fd135>
+:::
+
+
+## Principles of building a dashboard
+
+- Design for Speed
+- Keep the Dashboard Updated
+- Maintain Data Accuracy and Source Reliability
+
+::: aside
+<https://medium.com/@mokkup/8-essential-dashboard-design-principles-for-effective-data-visualization-40653c5fd135>
+:::
+
+## Dashboards in Quarto
+
+- Quarto has a output type called a dashboard
+- Built around the concept of "cards" in columns and rows
+- Able to be easily deployed to a website
+- Same approach as the Quarto documents we have used
+
+## Science question
+
+- How lake-ice across the globe is changing over time?
+- Use all the lakes in the lake-ice off dataset (from Module 3)
+
+## Assignment
+
+- `assignmment/assignment.md` is the introduction for the assignment
+- `assignmment/dashboard.qmd` is the template that will complete for the assignment
+- `tutorial/example-dashboard.qmd` is a simple example dashboard
