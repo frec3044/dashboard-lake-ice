@@ -1,13 +1,5 @@
 # Synthesis and Dashboards
 
-## Dashboard
-
-Deplaying data to stWhat is a dashboard?
-
-Concepts of cards
-
-Why dashboard
-
 ## Goal
 
 Build a dashboard to provide insights on how lake-ice across the globe is changing over time
@@ -20,6 +12,8 @@ The data for this module are provided within the GitHub repository in the `data`
 -   Metadata describing characteristics of the lake: `data/lake_metadata.json`
 
 ## Dashboard requirements
+
+Your dashboard must use tidyverse functions and other functions we covered in class to generate the following dashboard cards: 
 
 1.  Seven cards with the following information:
 
@@ -45,14 +39,20 @@ The data for this module are provided within the GitHub repository in the `data`
 
 ## Example dashboard
 
-# Rendering and committing
+See `tutorials/example-dashboard.qmd`
 
-Remember to Render your dashboard as HTML and comment+push to GitHub your code and rendered HTML that was created when you knitted the document. Your GitHub repository should have multiple commits with informative commit messages.
+## Quarto dashboard documentation
 
-# Citation of module
+<https://quarto.org/docs/dashboards/>
+
+## Rendering and committing
+
+Remember to Render your dashboard as HTML and comment+push to GitHub your code and rendered HTML. Your GitHub repository should have multiple commits with informative commit messages.
+
+## Citation of module
 
 This module was initially developed as an Excel-based activity by Carey, C.C., J.L. Klug, and D.C. Richardson. 1 April 2015. Project EDDIE: Lake Ice Phenology. Project EDDIE Module 1, Version 1: <http://cemast.illinoisstate.edu/data-for-students/modules/ice-phenology.shtml>. Module development was supported by NSF DEB 1245707.
 
-# Attribution
+## Attribution
 
 Include citation of any AI-generated assistance or discussion with classmates (per policy in syllabus). Proper documentation of AI-generated assistance includes the prompt, the source (e.g., ChatGPT), and the significant parts of the response. Proper documentation of discussion with classmates include listing their names and the components discussed.

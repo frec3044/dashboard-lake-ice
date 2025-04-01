@@ -57,9 +57,30 @@ editor: visual
 - Able to be easily deployed to a website
 - Same approach as the Quarto documents we have used
 
+## Dashboards in Quarto
+
+```
+---
+title: "Sunapee Ice-off Dashboard"
+format: 
+  dashboard:
+    embed-resources: true
+---
+
+## Row {height="20%"}
+
+ADD CHUCK (CARD)
+
+### Column 
+
+ADD CHUCK (CARD)
+
+### Column
+```
+
 ## Science question
 
-- How lake-ice across the globe is changing over time?
+- How are lake-ice across the globe is changing over time?
 - Use all the lakes in the lake-ice off dataset (from Module 3)
 
 ## Assignment
@@ -67,3 +88,8 @@ editor: visual
 - `assignmment/assignment.md` is the introduction for the assignment
 - `assignmment/dashboard.qmd` is the template that will complete for the assignment
 - `tutorial/example-dashboard.qmd` is a simple example dashboard
+
+## Assignment
+
+-  Building "cards" for a dashboard
+-  Most use tidyverse function covered in class where they can be used

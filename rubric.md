@@ -79,13 +79,23 @@ Question 9:
 
 Question 10:
 
-- Full Credit: Card with an appropiate plot (one displays data in a logical and insight way) is present. Plot is generated using ggplot. The appropriate geom is used.  Clear axis labels and titles are used.
+- Full Credit: Card with an appropiate plot (one displays data in a logical and insight way) is present. Plot is generated using ggplot. The appropriate geom is used.  Clear axis labels and titles are used. Data in the JSON.
 
 - Partial Credit: Card with an appropiate plot (one displays data in a logical and insightful way) is present. but minor errors in the plot. Plot is provided but one of the required elements missing or incorrect (colors, axes, labels, title, labels)
 
 - Partial Credit: Card is present but the display is not insightful OR card is present but major errors in the plot. Plot is provided but multiple of the required elements missing or incorrect (colors, axes, labels, title, labels).
 
 - No Credit: No answer provided
+
+Question 11:
+
+- Full Credit: Analysis uses tidyverse functions that were covered in class, these my include joins, map, functions, filters, selects, mutates, etc.
+
+- Partial Credit: Some use of non-tidyverse functions where tidyvere functions could have been used.
+
+- Partial Credit: Extensive use of non-tidyverse functions where tidyvere functions could have been used.
+
+- No Credit: No use of tidyverse functions.
 
 Quarto
 
