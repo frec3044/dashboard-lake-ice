@@ -34,7 +34,9 @@ Your dashboard must use tidyverse functions and other functions we covered in cl
 <!-- -->
 
 2.  One card that provides a table with the data. The columns should be `lake name` and `slope`. The table must be sorted so the lake with the largest slope is first
+
 3.  One card that is a histogram that shows the slope values from the different lakes.
+
 4.  One card where you add a plot of your choice. The plot must use the data on the slopes of the lakes and data in the JSON file that describes characteristics of the lakes (`data/lake_metadata.json)`
 
 ## Example dashboard
