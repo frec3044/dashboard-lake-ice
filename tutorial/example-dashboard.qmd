@@ -82,6 +82,7 @@ list(
 
 ## Row {height="60%"}
 
+### Column
 
 ```{r}
 #| title: Data table
