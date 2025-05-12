@@ -79,7 +79,7 @@ Question 9:
 
 Question 10:
 
-- Full Credit: Card with an appropiate plot (one displays data in a logical and insight way) is present. Plot is generated using ggplot. The appropriate geom is used.  Clear axis labels and titles are used. Data in the JSON.
+- Full Credit: Card with an appropriate plot (one displays data in a logical and insightful way) is present. Plot is generated using ggplot. The appropriate geom is used.  Clear axis labels and titles are used. Data in the JSON.
 
 - Partial Credit: Card with an appropiate plot (one displays data in a logical and insightful way) is present. but minor errors in the plot. Plot is provided but one of the required elements missing or incorrect (colors, axes, labels, title, labels)
 
