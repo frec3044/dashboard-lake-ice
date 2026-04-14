@@ -13,42 +13,28 @@ editor: visual
 
 ## What is a dashboard?
 
--   A dashboard is website or document that uses graphs, tables, and other visual elements to represent data and analyses.\
+-   A dashboard is a website or document that uses graphs, tables, and other visual elements to represent data and analyses.
 -   A dashboard has an audience and should support decision-making
 
-## Principles of building a dashboard
+## Principles of building a dashboard {.smaller}
 
--   Keep it Simple and Intuitive
--   Use Consistent Design Elements
+-   Keep it Simple and Intuitive 
+-   Use Consistent Design Elements 
 -   Prioritize Information
-
-::: aside
-[https://medium.com/\@mokkup/8-essential-dashboard-design-principles-for-effective-data-visualization-40653c5fd135](https://medium.com/@mokkup/8-essential-dashboard-design-principles-for-effective-data-visualization-40653c5fd135){.uri}
-:::
-
-## Principles of building a dashboard
-
 -   Make it Responsive
 -   Use White Space Effectively
 -   Use Consistent Layout
-
-::: aside
-[https://medium.com/\@mokkup/8-essential-dashboard-design-principles-for-effective-data-visualization-40653c5fd135](https://medium.com/@mokkup/8-essential-dashboard-design-principles-for-effective-data-visualization-40653c5fd135){.uri}
-:::
-
-## Principles of building a dashboard
-
 -   Design for Speed
 -   Keep the Dashboard Updated
 -   Maintain Data Accuracy and Source Reliability
 
 ::: aside
-[https://medium.com/\@mokkup/8-essential-dashboard-design-principles-for-effective-data-visualization-40653c5fd135](https://medium.com/@mokkup/8-essential-dashboard-design-principles-for-effective-data-visualization-40653c5fd135){.uri}
+[Dashboard design principles](https://medium.com/@mokkup/8-essential-dashboard-design-principles-for-effective-data-visualization-40653c5fd135)
 :::
 
 ## Dashboards in Quarto
 
--   Quarto has a output type called a dashboard
+-   Quarto has an output type called a dashboard
 -   Built around the concept of "cards" in columns and rows
 -   Able to be easily deployed to a website
 -   Same approach as the Quarto documents we have used
@@ -65,27 +51,29 @@ format:
 
 ## Row {height="20%"}
 
-ADD CHUCK (CARD)
+ADD CHUNK (CARD)
 
 ### Column 
 
-ADD CHUCK (CARD)
+ADD CHUNK (CARD)
 
 ### Column
 ```
 
 ## Science question
 
--   How are lake-ice across the globe is changing over time?
--   Use all the lakes in the lake-ice off dataset (from Module 3)
+-   How is lake ice across the globe changing over time?
 
 ## Assignment
 
--   `assignmment/assignment.md` is the introduction for the assignment
--   `assignmment/dashboard.qmd` is the template that you will complete for the assignment
--   `tutorial/example-dashboard.qmd` is a simple example dashboard
+-   `assignment/assignment.md` describes the full requirements
+-   `assignment/dashboard.qmd` is the template you will complete
+-   `tutorials/example-dashboard.qmd` is a simple example dashboard
+-   Use all lakes in the ice-off dataset (from Module 3)
 
-## Assignment
+## Assignment continued
 
--   Building "cards" for a dashboard
--   Most use tidyverse function covered in class where they can be used
+-   Build "cards" for a dashboard displaying your analysis
+-   Must use tidyverse functions covered in class, where use is appropriate
+-   Must write a custom function and use a map function to calculate slopes
+-   Render as HTML and push to GitHub with multiple commits

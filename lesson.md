@@ -16,22 +16,22 @@ Lakes are changing worldwide due to altered climate. Many lakes that were histor
 
 ## Questions
 
-Are lakes losing ice earlier in the year?
+- Are lakes losing ice earlier in the year?
+- What lake characteristics (e.g., latitude, elevation, area) predict faster rates of change in ice-off?
 
-## Ojectives
+## Objectives
 
 -   Understand how global climate change impacts local aquatic ecosystems
--   Analyze a long-term ice-off dataset with understanding of statistical
-    differences, biological relevance, and sources of variation
+-   Analyze a long-term ice-off dataset with respect to statistical trends, biological relevance, and sources of variation
 -   Predict future scenarios of ice-off
--   Applying linear regression models
+-   Apply linear regression models
 -   Develop skills using R for graphing and statistics
 -   Generate Quarto Dashboards
--   Practice the data science workflow in the context of the Tidyverse.
+-   Practice the data science workflow in the context of the Tidyverse
 
 ## Requires
 
-- `jsonslite` for reading jsons
+- `jsonlite` for reading jsons
 -  `readxl` for reading excel files
 - `tidyverse` for read, joining, analyzing, and visualizing data
 - `DT` for printing tables
@@ -39,13 +39,16 @@ Are lakes losing ice earlier in the year?
 
 ## Instructions
 
-  - Open the notebook `assignment/assignment.md` in RStudio and read instructions
-  - Build dashboard in `assignment/dashboard.qmd`
-  - `render` + commit output files to GitHub
+  - Open `assignment/assignment.md` in RStudio and read the full requirements
+  - Review `tutorial/example-dashboard.qmd` as a reference for dashboard structure and syntax
+  - Build your dashboard in `assignment/dashboard.qmd`
+    - Write a custom function and use a map function (e.g., `map_df()`) to calculate slopes across all lakes
+    - Complete all value boxes, the data table, the histogram, and the custom plot
+  - `render` the dashboard as HTML, then `commit` and `push` all output files to GitHub with informative commit messages
 
 ## Context
 
-This module has been developed a module in a junior-level Environmental Data Science course at Virginia Tech.  The course is required for majors in the Environmental Data Science degree.  The course has a pre-requisite course that introduces students to tidyverse concepts.  It assumes that students have a set of Git and GitHub and understand how to commit and push through Rstudio.
+This module was developed for a junior-level Environmental Data Science course at Virginia Tech.  The course is required for majors in the Environmental Data Science degree.  The course has a pre-requisite course that introduces students to tidyverse concepts.  It assumes that students have a set of Git and GitHub and understand how to commit and push through Rstudio.
 
 ## Timeframe
 
@@ -53,8 +56,8 @@ This module has been developed a module in a junior-level Environmental Data Sci
 
 ## Background Reading
 
-The background reading is embbed in the assignment Quarto.  Quarto dashboard documentation can be found [here](https://quarto.org/docs/dashboards/)
+Background context for the scientific questions is provided in `assignment/assignment.md`. Quarto dashboard documentation can be found [here](https://quarto.org/docs/dashboards/)
 
 ## References
 
-This module was initially developed as a Excel-based activity by Carey, C.C., J.L. Klug, and D.C. Richardson. 1 April 2015. Project EDDIE: Lake Ice Phenology. Project EDDIE Module 1, Version 1: <http://cemast.illinoisstate.edu/data-for-students/modules/ice-phenology.shtml>. Module development was supported by NSF DEB 1245707.
+This module was initially developed as an Excel-based activity by Carey, C.C., J.L. Klug, and D.C. Richardson. 1 April 2015. Project EDDIE: Lake Ice Phenology. Project EDDIE Module 1, Version 1: <http://cemast.illinoisstate.edu/data-for-students/modules/ice-phenology.shtml>. Module development was supported by NSF DEB 1245707.

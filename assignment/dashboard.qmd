@@ -13,6 +13,7 @@ logo: images/noun-frozen-lake-serenity-6926278.png #image created by jowy san fr
 
 library(tidyverse)
 library(readxl)
+library(jsonlite)
 library(DT)
 theme_set(theme_bw(base_size = 22))
 ```
@@ -26,9 +27,16 @@ data <- read_excel("data/lake_ice_off_data.xlsx", sheet = 2)
 
 <!--
 Use the following chunk to process the data.
-1. Clean up the data so it is ready for analysis
-2. Calculate the slope and intercept for each lake.  The creation of a function and use of a map function is required for full credit.
-3. Generate values for required for the 7 value boxes
+Note: DOY = Day of Year (e.g., January 1 = 1, February 1 = 32, etc.)
+
+0. Load the lake metadata from "data/lake_metadata.json" using read_json() from the jsonlite package (already loaded above)
+1. Clean up the ice-off data so it is ready for analysis
+2. Write a function that calculates the slope of a linear regression (ice-off DOY ~ year) for a single lake,
+   then use a map function (e.g., map_df()) to apply it across all lakes.
+   The creation of a function and use of a map function is required for full credit.
+3. Generate the values required for the 7 value boxes (num_lakes, earliest_year, most_recent_year,
+   highest_slope_lake, smallest_slope_lake, mean_slope, years_to_one_week)
+4. Create a data frame called slope_data with columns lake_name and slope, for use in the table below
 --->
 ```{r}
 #| label: prep-data
@@ -149,7 +157,8 @@ list(
 
 <!--
 Create a value box card with the predicted mean number of years to lose 1 week of ice
-You will need to have already created a variable called year_decade
+You will need to have already created a variable called years_to_one_week
+(calculated as: 7 / abs(mean_slope))
 --->
 
 ```{r}
@@ -158,7 +167,7 @@ You will need to have already created a variable called year_decade
 
 list(
   color = "primary",
-  value = round(year_decade,0)
+  value = round(years_to_one_week,0)
 )
 ```
 
@@ -171,7 +180,7 @@ should be `lake name` and `slope`.  Use the code below as-is
 
 ```{r}
  slope_data |>
-  arrange(slope) |>
+  arrange(desc(slope)) |>
   mutate(slope = round(slope, 2)) |> 
   select(lake_name, slope) |> 
   datatable(
@@ -183,24 +192,28 @@ should be `lake name` and `slope`.  Use the code below as-is
 ### Column
 
 <!--
-Add histogram that shows the slope values from the different lakes
+Add histogram that shows the slope values from the different lakes.
+Hint: use geom_histogram() with slope on the x-axis.
+Label your axes clearly (e.g., x = "Slope (DOY/year)", y = "Number of lakes").
 --->
 
 ```{r}
-#| title: Histogram
+#| title: Histogram of Ice-Off Slopes
 
 ```
 
 ### Column
 
 <!--
-Add a plot of your choice that you think would be informative for the dashboard
-The plot must use the data on the slopes of the lakes and data in the JSON file 
-that describes characteristics of the lakes (data/lake_metadata.json)
+Add a plot of your choice that you think would be informative for the dashboard.
+The plot must use the slope data joined with the lake metadata from data/lake_metadata.json.
+For example, you might plot slope vs. latitude, elevation, or lake area to explore
+what lake characteristics predict faster or slower ice-off trends.
+Replace the title below with a descriptive title for your plot.
 --->
 
 ```{r}
-#| title: Add useful title for card
+#| title: "Your Plot Title Here"
 
 ```
 
